@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor App</title>
+
+    <!-- .....CSS FILE LINK.... -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+    <!-- LINK FOR FONTAWESOME ICONS..... -->
+    <script src="https://kit.fontawesome.com/6dae656b2e.js" crossorigin="anonymous"></script>
+
+
+    <!-- LINK FOR GOOGLE METERIA ICONS..... -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- ============ HEADER 01 ============ -->
+
+    <header class="Header01">
+        <h2>Online Image Editing App</h2>
+    </header>
+
+    <!-- ============ HEADER 02 ============ -->
+
+    <header class="Header02">
+
+        <!-- ============ SELECT IMAGE ============ -->
+
+        <div class="Choose-Image">
+            <i class="fa-solid fa-images"></i>
+            <button id="chooseImage">Choose Image</button>
+            <input type="file" class="Input-file" accept="image/*" hidden>
+        </div>
+
+
+        <!-- ============ EDITING TAB BUTTONS ============ -->
+
+        <div class="Editor-tabs">
+            <!-- <div class="Cropper">
+                <i class="fa-solid fa-crop-simple"></i>
+                <button id="cropImg">Crop</button>
+                
+            </div> -->
+            <div class="AdjustImage active">
+                <i class="fa-solid fa-sliders"></i>
+                <button id="Adjustment">Adjustment</button>
+            </div>
+            <div class="CropImage">
+                <i class="fa-solid fa-arrows-spin"></i>
+                <button id="cropImg">Flip-Rotate</button>
+            </div>
+            <div class="Filters">
+                <i class="fa-solid fa-brush"></i>
+                <button id="Filter">Filters</button>
+            </div>
+            <!-- <div class="Mark-up">
+                <i class="fa-solid fa-highlighter"></i>
+                <button id="Mark-up">Mark-up</button>
+            </div> -->
+            <!-- <div class="Mark-up">
+                <i class="fa-solid fa-highlighter"></i>
+                <button id="Mark-up">Custom-Background</button>
+            </div> -->
+        </div>
+
+        <!-- ============ SAVE & RESET IMAGE BUTTONS ============ -->
+
+        <div class="Save-Reset">
+            <div class="ResetImage">
+                <span class="material-symbols-outlined">
+                    restart_alt
+                </span>
+                <button id="resetBtn">Reset Image</button>
+            </div>
+            <div class="SaveImage">
+                <span class="material-symbols-outlined">
+                    download
+                </span>
+                <button id="savebtn">Save Image</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============ MAIN-CONTAINER ============ -->
+
+    <div class="Container">
+
+        <div class="ImageContainer">
+            <img src="Images/Messi.jpg" alt="">
+        </div>
+
+        <!-- ======= TAB-CONTAINERS ACCORTING TO EDITING-TABS ====== -->
+
+        <div class="TabContainer">
+            <div class="SubTabContainer Adjustment-Container active">
+                <div class="Lights">
+                    <h2>Lights</h2>
+
+                    <!-- SLIDER STATUS  -->
+                    <div class="Slider-Info-Lights">
+                        <div class="Slider-Status-Lights">
+                            <p id="name">Brightness</p>
+                            <p id="value">100%</p>
+                        </div>
+                        <input type="range" min="0" max="200">
+                    </div>
+
+                    <!-- DIFFERENT LIGHTS -->
+                    <div class="Light-Types">
+                        <div class="Brightness isActive" id="brightness">
+                            <span class="material-symbols-outlined">light_mode</span>
+                            <label>Brightness</label>
+                        </div>
+                        <div class="Saturation" id="saturation">
+                            <span class="material-symbols-outlined">
+                                colorize
+                            </span>
+                            <label>Saturation</label>
+                        </div>
+                        <div class="Inversion" id="inversion">
+                            <span class="material-symbols-outlined">
+                                invert_colors
+                            </span>
+                            <label>Inversion</label>
+                        </div>
+                        <div class="Grayscale" id="grayscale">
+                            <span class="material-symbols-outlined">
+                                join
+                            </span>
+                            <label>Grayscale</label>
+                        </div>
+                        <div class="Contrast" id="contrast">
+                            <span class="material-symbols-outlined">
+                                contrast
+                            </span>
+                            <label>Contrast</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="Colours">
+                    <h2>Colours</h2>
+                    <div class="Slider-Info-Colours">
+                        <div class="Slider-Status-Colours">
+                            <p id="name">Saturation</p>
+                            <p id="value">100%</p>
+                        </div>
+                        <input type="range" min="0" max="100">
+                    </div>
+                    <div class="Colours-Type">
+                        <div class="Warmth">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                            <label>Warmth</label>
+                        </div>
+                        <div class="Tint">
+                            <i class="fa-solid fa-circle-chevron-left"></i>
+                            <label>Tint</label>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+
+    <!-- ============ ROTATE & FLIP ============ -->
+
+            <div class="SubTabContainer Crop-Container">
+                <h2>Crop & Rotate</h2>
+                <div class="Crop-and-Rotate">
+                    <div class="Right">
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <p>Rotate-Right</p>
+                    </div>
+                    <div class="Left">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <p>Rotate-Left</p>
+                    </div>
+                    <div class="Flip-Vertical">
+                        <button id="vertical"><i class="fa-solid fa-right-left" id="btnVertical"></i></button>
+                        <p>Flip Vertical</p>
+                    </div>
+                    <div class="Flip-Horizontal">
+                        <button id="horizontal"><i class="fa-solid fa-right-left"></i></button>
+                        <p>Flip Horizontal</p>
+                    </div>
+                </div>
+            </div>
+
+    <!-- ============ FILTERS ============ -->
+
+            <div class="SubTabContainer Filter-Container">
+                <h2>Filters</h2>
+                <div class="Filter-Type">
+                    <div class="Filter-Image" id="original">
+                        <img id="imgOriginal" src="Images/Messi.jpg" alt="">
+                        <p>Original</p>
+                    </div>
+                    <div class="Filter-Image" id="blur">
+                        <img id="imgBlur" src="Images/Messi.jpg" alt="">
+                        <p>Blur</p>
+                    </div>
+                    <div class="Filter-Image" id="bright">
+                        <img id="imgBright" src="Images/Messi.jpg" alt="">
+                        <p>Bright</p>
+                    </div>
+                    <div class="Filter-Image" id="grayscaled">
+                        <img id="imgGrayscaled" src="Images/Messi.jpg" alt="">
+                        <p>Grayscaled</p>
+                    </div>
+                    <div class="Filter-Image" id="hue-rotate">
+                        <img id="imgHue" src="Images/Messi.jpg" alt="">
+                        <p>Hue-rotate</p>
+                    </div>
+                    <div class="Filter-Image" id="opacity">
+                        <img id="imgOpacity" src="Images/Messi.jpg" alt="">
+                        <p>Opacity</p>
+                    </div>
+                    <div class="Filter-Image" id="saturated">
+                        <img id="imgSaturated" src="Images/Messi.jpg" alt="">
+                        <p>Saturated</p>
+                    </div>
+                    <div class="Filter-Image" id="sepia">
+                        <img id="imgSepia" src="Images/Messi.jpg" alt="">
+                        <p>Sepio</p>
+                    </div>
+                    <div class="Filter-Image" id="contrast">
+                        <img id="imgContrast" src="Images/Messi.jpg" alt="">
+                        <p>Contrast</p>
+                    </div>
+                    <div class="Filter-Image" id="inverted">
+                        <img id="imgInverted" src="Images/Messi.jpg" alt="">
+                        <p>Inverted</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="SubTabContainer Mark-up-Container">
+                <h2>Mark-up</h2>
+                <div class="Marker-Type">
+                    <div class="Pensile">
+                        <button><i class="fa-solid fa-pencil"></i></button>
+                        <p>---</p>
+                    </div>
+                    <div class="Pen">
+                        <button><i class="fa-solid fa-pen-clip"></i></button>
+                        <p>---</p>
+                    </div>
+                    <div class="Brush">
+                        <button><i class="fa-solid fa-paintbrush"></i></button>
+                        <p>---</p>
+                    </div>
+                    <div class="Eraser">
+                        <button><i class="fa-solid fa-eraser"></i></i></button>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

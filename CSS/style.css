@@ -1,0 +1,526 @@
+/*.................. GOOGLE FONT LINK........... */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Roboto Slab', serif; */
+}
+body{
+    background-color: rgb(31 31 31);
+}
+
+/* ===================================== */
+/* ----------------- HEADER 01 --------- */
+/* ===================================== */
+
+.Header01{
+    width: 100%;
+    height: 55px;
+    /* border: 1px solid white; */
+    /* background-color: #151530; */
+    background-color: #1a1a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Header01 h2{
+    /* color: #57dfff; */
+    color: #8eebff;
+    font-size: 30px;
+    /* margin-left: 40px; */
+}
+
+
+/* ======================================= */
+/* ----------------- HEADER 02 ----------- */
+/* ======================================= */
+
+.Header02{
+    width: 100%;
+    height: 55px;
+    /* border: 1px solid white; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    /* padding-top: 20px; */
+}
+/* ----------------- HEADER 02 ----------- */
+/* ------------ CHOOSE-IMAGE-BTN --------- */
+.Choose-Image{
+    border: 3px solid rgb(68, 68, 68);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 10px;
+    border-radius: 5px;
+
+}
+.Header02 #chooseImage{
+    padding: 10px 8px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.Choose-Image:hover{
+    background-color: #57dfff;
+    color: black;
+    border: 3px solid #47b8d1;
+}
+#chooseImage:hover{
+    color: black;
+}
+/* ----------------- HEADER 02 ----------- */
+/* -------------- EDITOR-TABS ------------- */
+.Header02 .Editor-tabs{
+    /* border: 2px solid white; */
+    width: 400px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Editor-tabs div{
+    border-radius: 3px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(31 31 31);
+    transition: 0.2s;
+}
+
+.Editor-tabs div:hover{
+    color: rgb(176, 173, 173);
+}
+.Editor-tabs button{
+    border: none;
+    background: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.Editor-tabs div span{
+    font-size: 10px;
+}
+.Editor-tabs .active{
+    border-bottom: 3px solid #57dfff;
+}
+
+/* ----------------- HEADER 02 ----------- */
+/* -------------- SAVE-RESET ------------- */
+.Header02 .Save-Reset{
+    /* border: 2px solid white; */
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Header02 .Save-Reset .SaveImage, .ResetImage{
+    width: 120px;
+    padding: 8px;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    border: 3px solid rgb(68, 68, 68);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.Header02 .Save-Reset .SaveImage:hover, .ResetImage:hover{
+    color: black;
+    background-color: #57dfff;
+}
+.Header02 .Save-Reset .SaveImage button:hover, .ResetImage button:hover{
+    color: black;
+}
+
+.Header02 .Save-Reset .SaveImage button, .ResetImage button{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ======================================= */
+/* ----------------- CONTAINER ----------- */
+/* ======================================= */
+.Container{
+    width: 100%;
+    height: 90vh;
+    /* border: 2px solid white; */
+    /* padding: 20px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+}
+.Container .ImageContainer{
+    width: 70%;
+    height: auto;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 5px;
+
+    overflow: hidden;
+
+    
+}
+.Container .ImageContainer img{
+    max-width: 1000px;
+    max-height: 700px;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.Container .TabContainer{
+    width: 25%;
+    height: auto;
+    /* border: 2px solid white; */
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    
+    overflow: auto;
+}
+
+/* ----------------- CONTAINER ----------- */
+/* ----------------- ROTATE & FLIP ----------- */
+
+.TabContainer .Crop-Container{
+    display: none;
+}
+
+.TabContainer .Crop-and-Rotate{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.TabContainer h2{
+    margin: 20px;
+}
+.TabContainer .Crop-and-Rotate div{
+    /* border: 2px solid white; */
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.TabContainer .Crop-and-Rotate div button{
+    padding: 20px 24px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    border-radius: 50%;
+    background: none;
+    color: white;
+    border: none;
+    /* border: 2px solid white; */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+/* .TabContainer .Crop-and-Rotate div,:hover{
+    color: #57dfff;
+} */
+
+.TabContainer .Crop-and-Rotate button:hover{
+    color: #8b8e8f;
+    box-shadow: 0px 10px 20px rgba(9, 9, 9, 0.5);
+}
+#btnVertical{
+    rotate: 90deg;
+}
+
+
+/* ----------------- CONTAINER ----------- */
+/* ----------------- ADJUSTMENT-CONTAINER ----------- */
+.Adjustment-Container{
+    display: none;
+    padding: 0px 20px;
+}
+/* .Adjustment-Container .Lights{
+    border: 2px solid red;
+} */
+.Adjustment-Container .Slider-Info-Lights{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.Slider-Info-Lights .Slider-Status-Lights{
+    display: flex;
+    justify-content: space-between;
+}
+.Slider-Info-Lights input{
+    width: 100%;
+    height: 3px;
+    background: #050a0b;
+    
+    border: none;
+    margin-bottom: 20px;
+}
+
+.Adjustment-Container .Light-Types{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Light-Types div{
+    border-radius: 5px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Light-Types .isActive{
+    border: 2px solid rgb(98, 98, 98);
+    
+}
+/* 
+.Light-Types div:hover{
+    border: 2px solid rgb(98, 98, 98);
+} */
+.Light-Types div span{
+    /* border: 2px solid white; */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.Light-Types div i{
+    /* border: 2px solid white; */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* .Adjustment-Container .Colours{
+    border: 2px solid red;
+}
+.Adjustment-Container .Colours{
+    border: 2px solid red;
+} */
+.Adjustment-Container .Slider-Info-Colours{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.Slider-Info-Colours .Slider-Status-Colours{
+    display: flex;
+    justify-content: space-between;
+}
+.Slider-Info-Colours input{
+    width: 100%;
+    height: 3px;
+    background: #050a0b;
+    border: none;
+}
+
+.Adjustment-Container .Colours-Type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Colours-Type div{
+    /* border: 2px solid white; */
+    border-radius: 5px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Colours-Type div i{
+    /* border: 2px solid white; */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ----------------- CONTAINER ----------- */
+/* ----------------- FILTER-CONTAINER ----------- */
+
+
+.Filter-Container{
+    display: none;
+
+    /* padding-top: 20px; */
+}
+.Filter-Container .Filter-Type{
+    /* border: 1px solid white; */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.Filter-Container .Filter-Type div{
+    margin: 10px;
+    cursor: pointer;
+    /* border: 2px solid white; */
+    overflow: hidden;
+}
+.Filter-Container .Filter-Type img{
+    width: 135px;
+}
+
+
+/* ----------------- CONTAINER ----------- */
+/* ----------------- MARK-UP-CONTAINER ----------- */
+.Mark-up-Container{
+    display: none;
+
+    /* padding: 10px 20px; */
+}
+.Mark-up-Container .Marker-Type{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid white; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Mark-up-Container .Marker-Type div{
+    /* border: 2px solid white; */
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    margin: 20px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Mark-up-Container .Marker-Type div button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.Mark-up-Container .Marker-Type div i{
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.TabContainer .active{
+    display: block;
+}
+
+/* ................................................. */
+/* ................. MEDIA QUERIES.............. */
+/* ................................................. */
+
+@media(max-width: 768px){
+    /* heading... */
+    .Header01 h2{
+        font-size: 22px;
+    }
+
+    .Container{
+        flex-direction: column;
+        padding: 3px;
+    }
+    .Container .ImageContainer{
+        width: 100%;
+        height: 400px;
+    }
+    .Container .TabContainer{
+        width: 100%;
+    }
+
+    .Editor-tabs button{
+        display: none;
+    }
+    .Choose-Image button{
+        display: none;
+    }
+    .Choose-Image{
+        padding: 12px 12px;
+    }
+    .Header02 .Save-Reset{
+        width: auto;
+    }
+    .Header02 .Save-Reset button{
+        display: none;
+    }
+    .Header02 .Save-Reset .SaveImage, .ResetImage{
+        width: auto;
+    }
+
+    /* tab-container */
+    .TabContainer h2{
+        margin: 5px;
+    }
+    /* crop and rotate */
+    .TabContainer .Crop-and-Rotate{
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+    .TabContainer .Crop-and-Rotate div{
+        width: 90px;
+        height: 100px;
+    }
+
+    /* Light-Types buttons  */
+    .Light-Types div span{
+        /* border: 2px solid white; */
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .Light-Types div{
+        width: 90px;
+        height: 100px;
+    }
+
+    .TabContainer .Crop-and-Rotate{
+        flex-direction: row;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+}
+
